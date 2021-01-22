@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, Response
 from selenium import webdriver
 import os
 import time
