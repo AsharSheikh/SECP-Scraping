@@ -2,7 +2,7 @@ from flask import Flask, Response
 from selenium import webdriver
 import os
 import time
-import base64
+from base64 import b64decode
 
 app = Flask(__name__)
 
