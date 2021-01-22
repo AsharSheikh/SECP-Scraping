@@ -25,12 +25,12 @@ def hello_world():
 
    time.sleep(3)
    
-   png = driver.get_screenshot_as_png()
-   with open(Response(png, mimetype="image/png"), "rb") as imageFile:
-      str = base64.b64encode(imageFile.read())
+   blob = driver.get_screenshot_as_base64()
+   scr_png = b64decode(src_base64)
+   
       
    print("Finished!")
   
    driver.quit()
    
-   return str
+   return scr_png
