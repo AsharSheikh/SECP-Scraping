@@ -26,11 +26,10 @@ def hello_world():
    time.sleep(3)
    
    src_base64 = driver.get_screenshot_as_base64()
-   scr_png = b64decode(src_base64)
    
       
    print("Finished!")
   
    driver.quit()
    
-   return scr_png
+   return src_base64
