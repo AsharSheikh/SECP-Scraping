@@ -1,1 +1,1 @@
-worker: python SECP_Scraping.py 
+web: gunicorn wsgi:app 
