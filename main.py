@@ -28,4 +28,4 @@ def hello_world():
    print("Finished!")
    driver.quit()
    
-   return Response(png, mimetype="image/png")
+   return png
