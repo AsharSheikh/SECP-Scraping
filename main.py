@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def app():
    chrome_options = webdriver.ChromeOptions()
    chrome_options.add_argument("--headless")
    chrome_options.add_argument("--disable-dev-shm-usage")
