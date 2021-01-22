@@ -2,6 +2,7 @@ from flask import Flask, Response
 from selenium import webdriver
 import os
 import time
+import base64
 
 app = Flask(__name__)
 
@@ -23,9 +24,13 @@ def hello_world():
    driver.set_window_size(1920, 1080)
 
    time.sleep(3)
-
+   
    png = driver.get_screenshot_as_png()
+   with open(png, "rb") as imageFile:
+      str = base64.b64encode(imageFile.read())
+      
    print("Finished!")
+  
    driver.quit()
    
-   return png
+   return str
