@@ -25,7 +25,7 @@ def hello_world():
 
    time.sleep(3)
    
-   blob = driver.get_screenshot_as_base64()
+   src_base64 = driver.get_screenshot_as_base64()
    scr_png = b64decode(src_base64)
    
       
