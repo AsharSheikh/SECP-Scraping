@@ -26,7 +26,7 @@ def hello_world():
    time.sleep(3)
    
    png = driver.get_screenshot_as_png()
-   with open(png, "rb") as imageFile:
+   with open(Response(png, mimetype="image/png"), "rb") as imageFile:
       str = base64.b64encode(imageFile.read())
       
    print("Finished!")
